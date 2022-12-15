@@ -1,0 +1,12 @@
+// Write a program to print multiplication table of 19 inreversed order.
+#include<stdio.h>
+int main()
+{
+    int i;
+    printf("Multiplication of 19\n");
+    for(i=19; i; i--)
+    {
+        printf("19 X %d = %d\n",i, 19*i);
+    }
+    
+}
