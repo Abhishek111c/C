@@ -1,0 +1,27 @@
+// Write a program with three functions 1- Good Morning functions which prints "GoodMorning", 2- Good Afternoon functions which prints "GoodAfternoon", 3- Good Evening functions which prints "GoodEvening".  main() should call all of these in order 1,2,3.
+
+#include <stdio.h>
+void GoodMorning();
+void GoodAfternoon();
+void GoodEvening();
+
+int main()
+{
+ GoodMorning();
+ GoodAfternoon();
+ GoodEvening();
+    return 0;
+}
+
+ void GoodMorning(){
+     printf("GoodMorning Abhishek Chaudhary\n");
+ }
+ 
+  void GoodAfternoon(){
+     printf("GoodAfternoon Abhishek Chaudhary\n");
+ }
+ 
+  void GoodEvening(){
+     printf("GoodEvening Abhishek Chaudhary\n");
+ }
+ 
