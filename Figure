@@ -1,0 +1,15 @@
+// Write a small program which prints a figure.
+
+#include <stdio.h>
+
+int main(void) 
+{
+	printf("   ^\n");
+	printf("  / \\\n");
+	printf(" /   \\\n");
+	printf("<     >\n");
+	printf(" \\   /\n");
+	printf("  \\ /\n");
+	printf("   v\n");
+	return 0;
+}
