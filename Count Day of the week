@@ -1,0 +1,29 @@
+// Write a program that prints the name of a given day of the week. Your program must print the same result as the expected output.
+
+#include <stdio.h>
+
+int main(void) 
+{
+	int dayOfWeek;
+	scanf("%d", &dayOfWeek);
+	if (dayOfWeek == 1)
+		puts("The day of the week is: Monday");
+	if (dayOfWeek == 2)
+		puts("The day of the week is: Tuesday" );
+	if (dayOfWeek == 3)
+		puts("The day of the week is: Wednesday");
+	if (dayOfWeek == 4)
+		puts("The day of the week is: Thursday");
+	if (dayOfWeek == 5)
+		puts("The day of the week is: Friday");
+	if (dayOfWeek == 6)
+		puts("The day of the week is: Saturday");
+	if (dayOfWeek == 0)
+		puts("The day of the week is: Sunday");
+	if (dayOfWeek>6)
+		printf("There is no such day : %d. Input value must be from 0 to 6.\n", dayOfWeek);
+	if (dayOfWeek<0) /*student may use some other form of conditional statement / statements*/
+		printf("There is no such day : %d. Input value must be from 0 to 6.\n", dayOfWeek);
+
+	return 0;
+}
