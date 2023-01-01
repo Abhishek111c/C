@@ -1,0 +1,31 @@
+/*Write a program that takes one floating-point number, converts it to an integer number, and then prints a description of the given number.
+numbers greater than or equal to 1 and less than 2 - Very bad.
+numbers greater than or equal to 2 and less than 3 - Bad.
+numbers greater than or equal to 3 and less than 4 - Neutral.
+numbers greater than or equal to 4 and less than 5 - Good.
+numbers greater than or equal to 5 and less than 6 - Very good.
+
+When a number is out of the given range (1<=x<6), the program should print nothing.*/
+
+
+#include <stdio.h>
+
+int main(void) 
+{
+	float gradeAverage;
+	int finalGrade;
+
+	scanf("%f", &gradeAverage);
+	finalGrade = (int)gradeAverage;
+	if (finalGrade == 1)
+		puts("Very bad");
+	if (finalGrade == 2)
+		puts("Bad");
+	if (finalGrade == 3)
+		puts("Neutral");
+	if (finalGrade == 4)
+		puts("Good");
+	if (finalGrade == 5)
+		puts("Very good");
+	return 0;
+}
