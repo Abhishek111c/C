@@ -1,0 +1,31 @@
+/* Write a program that asks the user to enter a number, and prints twice as many lines as the number inputted.
+
+The first half of every other line contains one * character at the start, as many spaces as the number of this line (line numbers count from 0 in this task) and one * character at the end of the line. 
+The second half is a mirror reflection of the first.
+The outputted "drawing" should be similar to an arrowhead.*/
+
+#include <stdio.h>
+
+int main(void) 
+{
+	int input;
+	int i, j;
+	scanf("%d", &input);
+	for (i = 0; i < input && i < 20; i++)
+	{
+		printf("*");
+		for (j = 0; j < i; j++)
+			printf(" ");
+		printf("*\n");
+	}
+	if (input > 20)
+		input = 20;
+	for (i = input-1; i >= 0; i--)
+	{
+		printf("*");
+		for (j = 0; j < i; j++)
+			printf(" ");
+		printf("*\n");
+	}
+	return 0;
+}
