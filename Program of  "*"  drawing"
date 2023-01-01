@@ -1,0 +1,26 @@
+/* Write a program that asks the user to enter a number. Then:
+
+the program should print the number of lines corresponding to the number inputted;
+each line should contain the number of pairs of characters * equal to the number of this line.
+The outputted "drawing" should be similar to the right half of a pyramid. */
+
+#include <stdio.h>
+
+int main(void)
+{
+	int input;
+	int counter = 0;
+	scanf("%d", &input);
+	do
+	{
+		int innerCounter=-1;
+		do
+		{
+			printf("*");
+			innerCounter++;
+		} while (counter>innerCounter);
+		printf("\n");
+		counter++;
+	} while (input > counter && counter<20);
+	return 0;
+}
