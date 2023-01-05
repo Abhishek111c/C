@@ -1,0 +1,22 @@
+/*Write a program that asks the user to provide four names, and prints them in reverse order. For now, assume that each name consists of a maximum of 20 letters.
+Because you probably don't yet know about multidimensional arrays, use four variables. 
+Later you should store data of this kind in a 2D array (or a more advanced data type).*/
+
+#include <stdio.h>
+
+int main(void) 
+{
+	char name1[20];
+	char name2[20];
+	char name3[20];
+	char name4[20];
+	scanf("%s", name1);
+	scanf("%s", name2);
+	scanf("%s", name3);
+	scanf("%s", name4);
+	printf("%s\n", name4);
+	printf("%s\n", name3);
+	printf("%s\n", name2);
+	printf("%s\n", name1);
+	return 0;
+}
