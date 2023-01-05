@@ -1,0 +1,22 @@
+/*Write a program that asks the user to enter four numbers as strings, and creates a human readable IP address from them. 
+Your main task is to think about an appropriate data size to store the IP address. After this, your program should print the string.
+To insert four numbers (and three dots) into a string, you may use the sprintf function (not described), copy all the characters manually, or use another method more suitable for you.*/
+
+#include <stdio.h>
+
+int main(void) 
+{
+	char IPAddressPart1[4];
+	char IPAddressPart2[4];
+	char IPAddressPart3[4];
+	char IPAddressPart4[4];
+	char IPAddress[16];
+
+	scanf("%s", IPAddressPart1);
+	scanf("%s", IPAddressPart2);
+	scanf("%s", IPAddressPart3);
+	scanf("%s", IPAddressPart4);
+	sprintf(IPAddress, "%s.%s.%s.%s", IPAddressPart1, IPAddressPart2, IPAddressPart3, IPAddressPart4);
+	printf("%s\n", IPAddress);
+	return 0;
+}
