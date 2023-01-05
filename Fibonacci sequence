@@ -1,0 +1,32 @@
+/*Write a program that prints this Fibonacci sequence and two of its subsequent numbers. It should print:
+
+the first ten numbers from the Fibonacci sequence,
+then it should print only the odd numbers (1st, 3rd, 5th, 7th and 9th),
+after that, only the even numbers (2nd, 4th, 6th, 8th and 10th).*/
+
+
+#include <stdio.h>
+
+int main(void) 
+{
+	int fiboSequence[10], i;
+	fiboSequence[0] = 1;
+	fiboSequence[1] = 1;
+	for (i = 2; i<10; i++)
+	{
+		fiboSequence[i] = fiboSequence[i - 1] + fiboSequence[i - 2];
+	}
+	for (i = 0; i<10; i++)
+	{
+		printf("%d\n", fiboSequence[i]);
+	}
+	for (i = 0; i<10; i += 2)
+	{
+		printf("%d\n", fiboSequence[i]);
+	}
+	for (i = 1; i<10; i += 2)
+	{
+		printf("%d\n", fiboSequence[i]);
+	}
+	return 0;
+}
