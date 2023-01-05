@@ -1,0 +1,57 @@
+/* Write a program that displays the multiplication table of a given size.
+First, your program should ask the user to specify the size (height and weight are equal, so one number should be enough).
+If the size is greater than 20, the program should print the message: Matrix too big..
+Then it should allocate a matrix and fill this matrix with appropriate values (remember: the element of [0][0] should store the multiplication result of 1 and 1).
+Then the program should print the multiplication table, four characters per cell. Finally, all memory must be freed.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int size;
+	scanf("%d", &size);
+	if(size>20)
+	{
+		puts("Matrix too big.");
+	}
+	else
+	{
+		int **matrix = (int**)malloc(sizeof(int *) * size);
+		int i, j;
+		for (i=0; i < size ; i++)
+		{
+			matrix[i] = (int*)malloc(sizeof(int) * size);
+		}
+
+		for (i = 0; i<size; i++)
+		{
+			for (j = 0; j<size; j++)
+			{
+				matrix[i][j] = (i + 1)*(j + 1);
+			}
+		}
+		printf("%4c", ' ');
+		for (j = 0; j<size; j++)
+		{
+			printf("%4d", j+1);
+		}
+		printf("\n");
+		for (i = 0; i<size; i++)
+		{
+			printf("%4d", i+1);
+			for (j = 0; j<size; j++)
+			{
+				printf("%4d", matrix[i][j]);
+			}
+			printf("\n");
+		}
+		for (i = 0; i < size; i++)
+		{
+			free(matrix[i]);
+		}
+		free(matrix);
+
+	}
+	return 0;
+}
