@@ -1,0 +1,24 @@
+/* Write a program that fills a 26-element array with letters from "a" to "z". Try not to use the int type, but only the char type for variables.
+When the array is filled, the program should print all the characters in reverse order, then print only the array elements that constitute the word "great".*/
+
+#include <stdio.h>
+
+int main(void) 
+{
+	char alphabet[26], c;
+	for (c = 'a'; c<='z'; c++)
+	{
+		alphabet[c-'a'] = c;
+	}
+
+	for (c = 'z'; c > 'a'; c--)
+	{
+		printf("%c\n", alphabet[c - 'a']);
+	}
+	printf("%c", alphabet['g'-'a']);
+	printf("%c", alphabet['r' - 'a']);
+	printf("%c", alphabet['e' - 'a']);
+	printf("%c", alphabet['a' - 'a']);
+	printf("%c\n", alphabet['t' - 'a']);
+	return 0;
+}
