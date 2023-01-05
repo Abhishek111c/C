@@ -1,0 +1,55 @@
+/* Create a two-dimensional array, fill it with data and print a letter when a piece is on the field and a space when there is no piece. 
+Store one letter for one piece.
+For now, we don't need any information about the color of the pieces.
+The starting positions (with letters which symbolize each piece) for all pieces are:
+The rooks (R) are placed on the outside corners, right and left edge (white on the 1st and black on the 8th line).
+The knights (N) are placed immediately inside of the rooks.
+The bishops (B) are placed immediately inside of the knights.
+The queen (Q) is placed on the central square of the same color as that of the player: white queen on the white square and black queen on the black square. Both stand on the d rank: white queen on the d1 field and black queen on the d8 field.
+The king (K) takes the vacant spot next to the queen.
+The pawns (P - not the official symbol, but you need to print something) are placed one square in front of all of the other pieces.*/
+
+
+
+#include <stdio.h>
+
+int main(void) 
+{
+	char board[8][8];
+	board[0][0] = 'R';
+	board[0][1] = 'N';
+	board[0][2] = 'B';
+	board[0][3] = 'Q';
+	board[0][4] = 'K';
+	board[0][5] = 'B';
+	board[0][6] = 'N';
+	board[0][7] = 'R';
+	board[7][0] = 'R';
+	board[7][1] = 'N';
+	board[7][2] = 'B';
+	board[7][3] = 'Q';
+	board[7][4] = 'K';
+	board[7][5] = 'B';
+	board[7][6] = 'N';
+	board[7][7] = 'R';
+	int i;
+	for (i = 0; i < 8; i++)
+	{
+		board[1][i] = 'P';
+		board[2][i] = ' ';
+		board[3][i] = ' ';
+		board[4][i] = ' ';
+		board[5][i] = ' ';
+		board[6][i] = 'P';
+	}
+	int j;
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 8; j++)
+		{
+			printf("%c", board[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
