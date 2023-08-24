@@ -1,0 +1,25 @@
+// create a pattern 
+
+#include<stdio.h>
+
+int main() {
+    int i,j,k,n,count=1;
+    char ch = 'A';
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    for(i=1; i<=n; i++)
+    {
+        for(k=n; k>=i; k--)
+        {
+            printf(" ");
+        }
+        for(j=1;j<=i;j++)
+        {
+            if(i%2==0)
+            printf("%c ",ch++);
+            else
+            printf("%d ",count++);
+        }
+        printf("\n");
+    }
+}
