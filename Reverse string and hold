@@ -1,0 +1,20 @@
+// Write a progrma to reverse a string and hold it.
+
+#include<stdio.h>
+#include<string.h>
+void main() {
+    char ch[100], temp;
+    int i, left, right, len;
+    printf("Enter the string: ");
+    scanf("%s",&ch);
+    len = strlen(ch);
+    left=0;
+    right=len-1;
+    for(i=left; i<=right; i++){
+        temp = ch[i];
+        ch[i] = ch[right];
+        ch[right] = temp;
+        right--;
+    }
+    printf("reverse string is: %s",ch);
+}
