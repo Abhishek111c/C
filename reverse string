@@ -1,0 +1,19 @@
+// Display a string in reverse order
+
+// reverse a string
+#include<stdio.h>
+#include<conio.h>
+
+int main() {
+    char ch[100];
+    int i,n;
+    printf("enter a string: ");
+    gets(ch);
+    n=strlen(ch);
+    for(i=n; i>=0; i--)
+    {
+        printf("%c",ch[i]);
+    
+    }
+    return 0;
+}
