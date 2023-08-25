@@ -1,0 +1,22 @@
+// string palindrome print
+
+#include<stdio.h>
+
+int main() {
+    char s[1000];
+    int i, num , c =0;
+    printf("Enter String: ");
+    gets(s);
+    
+    num = strlen(s);
+    for(i=0; i<num/2; i++)
+    {
+        if(s[i]==s[num-i-1])
+        c++;
+    }
+    if(c==i)
+    printf("String is palindrome.");
+    else
+    printf("String is not palindrome: ");
+    return 0;
+}
