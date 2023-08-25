@@ -1,0 +1,15 @@
+// Write a program, string index uppercase
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[100];
+    int m;
+    printf("enter the string");
+    gets(str);
+    printf("position which you want to capital: ");
+    scanf("%d",&m);
+    str[m-1] = str[m-1]-32;
+    puts(str);
+    
+}
